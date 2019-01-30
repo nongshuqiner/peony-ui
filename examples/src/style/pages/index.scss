@@ -1,0 +1,75 @@
+.main-header {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  height: 80px;
+  width: 100%;
+  line-height: 80px;
+  background-color: #EBEEF5;
+}
+
+// 内容
+.main {
+  min-height: 100%;
+  box-sizing: border-box;
+  margin-top: -80px;
+  padding: 80px 0 140px;
+  // padding: 80px 0 340px;
+}
+
+.container,
+.page-container {
+  width: 1140px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.page-container {
+  padding-top: 55px;
+}
+
+.main-footer {
+  width: 100%;
+  height: 140px;
+  // height: 340px;
+  box-sizing: border-box;
+  padding: 40px 150px;
+  margin-top: -140px;
+  // margin-top: -340px;
+  background-color: #f7fbfd;
+}
+
+#app.is-components {
+  .main {
+    padding: 80px 0 0;
+  }
+  .main-header {
+    .main-header-wrapper {
+      position: fixed;
+      width: 100%;
+      left: 0;
+      top: 0;
+      z-index: 1000;
+      background-color: #EBEEF5;
+    }
+  }
+}
+
+@media (max-width: 1140px) {
+  .container,
+  .page-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container,
+  .page-container {
+    padding: 0 20px;
+  }
+
+  #app.is-component .headerWrapper .container {
+    padding: 0 12px;
+  }
+}

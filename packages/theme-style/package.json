@@ -1,0 +1,32 @@
+{
+  "name": "peony-theme-chalk",
+  "version": "1.0.0",
+  "description": "Peony component chalk theme.",
+  "author": "nongshuqiner <ym1185509297@163.com>",
+  "license": "MIT",
+  "main": "lib/index.css",
+  "style": "lib/index.css",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "gulp build"
+  },
+  "keywords": [
+    "peony",
+    "peony-ui"
+  ],
+  "homepage": "https://github.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nongshuqiner/peony-ui.git"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-sass": "^3.1.0",
+    "gulp-autoprefixer": "^4.0.0"
+  },
+  "dependencies": {}
+}

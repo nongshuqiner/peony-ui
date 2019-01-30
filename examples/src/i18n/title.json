@@ -1,0 +1,14 @@
+{
+  "zh-CN": {
+    "home": "Peony - 网站快速成型工具",
+    "guide": "指南 | Peony",
+    "component": "组件 | Peony",
+    "resource": "资源 | Peony"
+  },
+  "en-US": {
+    "home": "Peony - A Desktop UI Toolkit for Web",
+    "guide": "Guide | Peony",
+    "component": "Component | Peony",
+    "resource": "Resource | Peony"
+  }
+}

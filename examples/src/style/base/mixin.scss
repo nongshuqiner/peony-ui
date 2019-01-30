@@ -1,0 +1,111 @@
+// mixins
+.clearfix {
+  zoom: 1;
+  &:before, &:after { content: ""; display: table; }
+  &:after {clear: both;}
+}
+
+// transition: 过渡时间 过渡延迟
+@mixin transition($duration: 0.25s, $delay: 0s){
+  transition: all $duration ease-in-out $delay;
+  -webkit-transition: all $duration ease-in-out $delay; /* Safari 和 Chrome */
+  -o-transition: all $duration ease-in-out $delay; /* Opera */
+  -moz-transition: all $duration ease-in-out $delay; /* Firefox 4 */
+}
+
+// text shadow
+@mixin ts($s1: 1px, $s2: 1px, $color: #fff){
+  text-shadow:
+  $s1 $s1 $s2 $color,
+  -$s1 $s1 $s2 $color,
+  $s1 (-$s1) $s2 $color,
+  -$s1 (-$s1) $s2 $color;
+}
+
+// background-image
+@mixin bgimage($image: none, $size: cover, $repeat: no-repeat, $position: 0% 0%, $clip: border-box){
+  // 设置背景图像
+  background-image: $image;
+  // 背景图像的尺寸:
+  // cover-把背景图像扩展至足够大，以使背景图像完全覆盖背景区域。背景图像的某些部分也许无法显示在背景定位区域中。
+  // contain-把图像图像扩展至最大尺寸，以使其宽度和高度完全适应内容区域。
+  background-size: $size;
+  // 图像的平铺模式
+  background-repeat: $repeat;
+  // 定位背景图像:默认值：0% 0%
+  background-position: $position;
+  // 背景的绘制区域:border-box	背景被裁剪到边框盒;padding-box	背景被裁剪到内边距框;content-box	背景被裁剪到内容框.
+  background-clip: $clip;
+}
+
+//
+@mixin jb($color1: #000, $color2: #fff, $deg: 0){
+  background-image: -webkit-linear-gradient($deg+deg, $color2, $color1);
+  background-image: linear-gradient($deg + deg, $color2, $color1);
+}
+
+// rotate
+@mixin rotate($deg: 360){
+  transform: rotate($deg+deg);
+  -webkit-transform: rotate($deg+deg);
+}
+
+// rotate and zoom
+@mixin xzfd($deg:360,$s1:1.2){
+  -webkit-transform:rotate($deg+deg) scale($s1);
+  transform:rotate($deg+deg) scale($s1);
+}
+
+// zoom
+@mixin fd($s1:1.2){
+  -webkit-transform:scale($s1);
+  transform:scale($s1);
+}
+
+// translate
+@mixin translate($s1: 0, $s2: 0){
+  transform: translate($s1, $s2);
+	-webkit-transform: translate($s1, $s2);
+}
+
+// no select
+@mixin noselect{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// one line text for ...
+@mixin oneline($s1) {
+  overflow: hidden;
+  line-height: $s1;
+  height: $s1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// calc
+@mixin calc($property, $expression) {
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+//
+@mixin hlh($s1) {
+  height: $s1;
+  line-height: $s1;
+  overflow: hidden;
+}
+
+// 格栅布局
+@mixin column($width,$gap){
+  -webkit-column-width:$width;
+  -moz-column-width:$width;
+  column-width:$width;
+  -webkit-column-gap:$gap;
+  -moz-column-gap:$gap;
+  column-gap:$gap;
+}

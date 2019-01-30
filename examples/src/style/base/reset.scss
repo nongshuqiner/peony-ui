@@ -1,0 +1,30 @@
+a {
+	color: #409EFF;
+	text-decoration: none;
+}
+
+code {
+	background-color: #f9fafc;
+	padding: 0 4px;
+	border: 1px solid #eaeefb;
+	border-radius: 4px;
+}
+
+button, input, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	color: inherit;
+}
+
+.hljs {
+	line-height: 1.8;
+	font-family: Menlo, Monaco, Consolas, Courier, monospace;
+	font-size: 12px;
+	padding: 18px 24px;
+	background-color: #fafafa;
+	border: solid 1px #eaeefb;
+	margin-bottom: 25px;
+	border-radius: 4px;
+	-webkit-font-smoothing: auto;
+}

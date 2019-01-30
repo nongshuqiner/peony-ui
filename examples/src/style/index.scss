@@ -1,0 +1,12 @@
+$static: ""; // 本地路径
+$fonts: "../../assets";
+
+// base
+@import "base/reset"; // 重置在前
+@import "base/const"; // 常量在前
+@import "base/base";
+@import "base/mixin";
+@import "base/fonts"; // 字体
+
+// pages
+@import "pages/index";

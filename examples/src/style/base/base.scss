@@ -1,0 +1,23 @@
+// css
+
+html {
+  position: relative;
+  font-size: $gFontSize;
+}
+body {
+  background: $gBg;
+  color: $gFontColor;
+  line-height: $gFontSize;
+  min-width: $gMinWidth;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-display: fallback;
+  font-weight: 400;
+}
+
+body, button, input, select, textarea {
+  font-family: "Helvetica Neue",Helvetica,tahoma,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","\5FAE\8F6F\96C5\9ED1",Arial,sans-serif;
+}
