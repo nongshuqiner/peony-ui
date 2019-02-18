@@ -12,8 +12,28 @@ import SummaryItem from '../packages/summary-item/index.js'
 import Circle from '../packages/circle/index.js'
 // 分隔线
 import Divider from '../packages/divider/index.js'
-// ...如果还有的话继续添加
 
+// Peony Image Gallery 图片画廊组件
+import ImageGallery from '../packages/image-gallery/index.js'
+
+// Peony Image Light 图片灯箱组件
+import ImageLight from '../packages/image-light/index.js'
+
+// Peony Image Magicbox 图片魔法盒组件
+import ImageMagicbox from '../packages/image-magicbox/index.js'
+
+// Peony Image multibox 图片多功能盒组件
+import ImageMultibox from '../packages/image-multibox/index.js'
+
+// Peony Image Slider 图片滑动视图组件
+import ImageSlider from '../packages/image-slider/index.js'
+
+// Peony Image Thumbanav 图片缩略导航组件
+import ImageThumbanav from '../packages/image-thumbsnav/index.js'
+
+// Selectbox 选择组件
+import Selectbox from '../packages/selectbox/index.js'
+// ...如果还有的话继续添加
 // 样式
 // import './common/scss/reset.css'
 
@@ -27,7 +47,14 @@ const components = [
   Summary,
   SummaryItem,
   Circle,
-  Divider
+  Divider,
+  ImageGallery,
+  ImageLight,
+  ImageMagicbox,
+  ImageMultibox,
+  ImageSlider,
+  ImageThumbanav,
+  Selectbox
   // ...如果还有的话继续添加
 ]
 
@@ -70,7 +97,14 @@ export default {
   Summary,
   SummaryItem,
   Circle,
-  Divider
+  Divider,
+  ImageGallery,
+  ImageLight,
+  ImageMagicbox,
+  ImageMultibox,
+  ImageSlider,
+  ImageThumbanav,
+  Selectbox
   // ...如果还有的话继续添加
 }
 

@@ -1,13 +1,13 @@
 <template>
   <div :class="classes + '-box'">
-    <div ref="point" :class="classes" :style="styles">
+    <div ref="point" :class="classes" :style="[styles, affixStyle]">
       <slot></slot>
     </div>
     <div v-show="slot" :style="slotStyle"></div>
   </div>
 </template>
 <script>
-import { on, off } from '@/utils/Dom.js'
+import { on, off, getPageElMaxZIndex } from '@/utils/Dom.js'
 const prefixCls = 'peony-affix'
 
 function getScroll (target, top) {
@@ -52,6 +52,7 @@ export default {
   },
   data () {
     return {
+      currMaxZIndex: null,
       affix: false,
       styles: {},
       slot: false,
@@ -65,6 +66,13 @@ export default {
         type = 'bottom'
       }
       return type
+    },
+    affixStyle () {
+      let style = {}
+      if (this.currMaxZIndex) {
+        style['z-index'] = this.currMaxZIndex + 1
+      }
+      return style
     },
     classes () {
       return [{ [`${prefixCls}`]: this.affix }]
@@ -85,6 +93,7 @@ export default {
       const elOffset = getOffset(this.$el)
       const windowHeight = window.innerHeight
       const elHeight = this.$el.getElementsByTagName('div')[0].offsetHeight
+      this.currMaxZIndex = getPageElMaxZIndex()
 
       // Fixed Top
       if ((elOffset.top - this.offsetTop) < scrollTop && this.offsetType === 'top' && !affix) {
@@ -130,9 +139,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.peony-affix {
-  position: fixed; z-index: 10; box-sizing: border-box;
-}
-</style>

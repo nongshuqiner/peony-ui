@@ -1,0 +1,40 @@
+.peony-anchor-wrapper {
+  overflow: auto;
+  padding-left: 4px;
+  padding-right: 4px;
+  // margin-left: -4px; box-sizing: border-box;
+}
+.peony-anchor {
+  position: relative;
+  padding-left: 2px;
+}
+.peony-anchor-ink {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  &:before {
+    content: ' ';
+    position: relative;
+    display: block;
+    width: 2px;
+    height: 100%;
+    background-color: #e8eaec;
+    margin: 0 auto;
+  }
+  .peony-anchor-ink-ball {
+    position: absolute;
+    left: 50%;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 2px solid #2d8cf0;
+    background-color: #fff;
+    transition: top 0.2s ease-in-out;
+    transform: translate(-50%, 2px);
+  }
+}
+.peony-anchor.fixed .peony-anchor-ink .peony-anchor-ink-ball {
+  display: none;
+}

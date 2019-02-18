@@ -1,0 +1,85 @@
+// letter-spacing 字母间距
+// text-transform 转换不同元素中的文本
+// user-select 设置或检索是否允许用户选中文本
+.peony-divider {
+  .peony-divider__wrap {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: rgba(0, 0, 0,.85);
+    letter-spacing: .05em;
+    background: #e8e8e8;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    // text-transform: uppercase;
+    // user-select: none;
+    // -webkit-user-select: none;
+    // -moz-user-select: none;
+    // -ms-user-select: none;
+  }
+}
+.peony-divider.is-hidden {
+  .peony-divider__wrap {
+    &:before, &:after { border: 0 !important; }
+    opacity: 0 !important;
+    background: transparent !important;
+  }
+}
+.peony-divider.is-type-horizontal { // 水平
+  display: block;
+  margin: 16px 0;
+  .peony-divider__wrap {
+    height: 1px;
+    width: 100%;
+    .title {
+      display: inline-block;
+      padding: 0 24px;
+    }
+    &:before, &:after {
+      border-top: 1px solid #e8e8e8;
+      transform: translateY(50%);
+      width: 50%;
+    }
+  }
+}
+.peony-divider.is-type-vertical { // 垂直
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 8px;
+  .peony-divider__wrap {
+    width: 1px;
+    height: 100%;
+    min-height: 0.9em;
+    writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl; // 文字垂直排版
+    .title {
+      display: inline-block;
+      padding: 24px 0;
+      display: inline;
+      writing-mode: tb-rl; // 文字垂直排版
+    }
+    &:before, &:after {
+      border-left: 1px solid #e8e8e8;
+      transform: translateX(50%);
+      height: 50%;
+    }
+  }
+}
+.peony-divider-with-text { // 文字内容
+  .peony-divider__wrap {
+    position: relative;
+    display: table;
+    height: auto;
+    width: auto;
+    white-space: nowrap;
+    text-align: center;
+    background: transparent;
+    &:before, &:after {
+      content: '';
+      display: table-cell;
+      position: relative;
+    }
+  }
+}

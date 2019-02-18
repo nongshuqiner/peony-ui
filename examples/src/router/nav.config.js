@@ -13,7 +13,7 @@ export default {
   'zh-CN': [
     {
       "name": "更新日志",
-      "href": "https://github.com/nongshuqiner"
+      "href": "https://github.com/nongshuqiner/peony-ui/commits/master"
     },
     {
       'name': '开发指南',

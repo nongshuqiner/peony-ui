@@ -1,6 +1,13 @@
 <template>
   <div :class="anchorLinkClasses">
-    <a :class="linkTitleClasses" :href="href" :data-scroll-offset="scrollOffset" :data-anchor-href="href" @click.prevent="goAnchor" :title="title">{{ title }}</a>
+    <a
+      :class="linkTitleClasses"
+      :href="href"
+      :title="title"
+      :data-scroll-offset="scrollOffset"
+      :data-anchor-href="href"
+      @click.prevent="goAnchor"
+    >{{ title }}</a>
     <slot></slot>
   </div>
 </template>
@@ -21,10 +28,10 @@ export default {
   },
   computed: {
     anchorLinkClasses () {
-      return [prefix, this.anchorCom.currentLink === this.href ? `${prefix}-active` : '']
+      return [prefix, this.anchorCom.currentLink === this.href ? 'is-active' : '']
     },
     linkTitleClasses () {
-      return [ `${prefix}-title` ]
+      return [ `${prefix}__title` ]
     }
   },
   methods: {
@@ -43,24 +50,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.peony-anchor-link {
-  padding: 8px 0 8px 16px; line-height: 1;
-  .peony-anchor-link-title {
-    display: block; position: relative;
-    transition: all .3s; color: #515a6e; margin-bottom: 8px;
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-    &:only-child {
-      margin-bottom: 0;
-    }
-  }
-}
-
-.peony-anchor-link-active > .peony-anchor-link-title {
-  color: #2d8cf0;
-}
-.peony-anchor-link .peony-anchor-link {
-  padding-top: 4px; padding-bottom: 4px;
-}
-</style>

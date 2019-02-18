@@ -4,7 +4,7 @@
   "description": "(芍药UI)UI component based on Vue-基于vue的UI组件",
   "author": "nongshuqiner <ym1185509297@163.com>",
   "license": "MIT",
-  "main": "dist/peony-ui.js",
+  "main": "lib/peony-ui.js",
   "files": [
     "lib",
     "src",

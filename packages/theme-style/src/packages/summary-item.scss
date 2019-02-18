@@ -1,0 +1,37 @@
+.peony-summary-item {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 0;
+  color: #818181;
+  width: 33.33%;
+  height: 100%;
+  box-sizing: border-box;
+  .peony-summary-item__desc {
+    display: block;
+    min-height: 24px;
+    // font-size: 24px; padding-bottom: 8px;
+  }
+  .peony-summary-item__title {
+    display: block;
+    // font-size: 14px;
+  }
+}
+
+.peony-summary-item.is-type-primary {
+  .peony-summary-item__desc { color: #409EFF; }
+}
+.peony-summary-item.is-type-info {
+  .peony-summary-item__desc { color: #2dc3e8; }
+}
+.peony-summary-item.is-type-gray {
+  .peony-summary-item__desc { color: #C0C4CC; }
+}
+.peony-summary-item.is-type-success {
+  .peony-summary-item__desc { color: #67C23A; }
+}
+.peony-summary-item.is-type-warning {
+  .peony-summary-item__desc { color: #E6A23C; }
+}
+.peony-summary-item.is-type-danger {
+  .peony-summary-item__desc { color: #F56C6C; }
+}

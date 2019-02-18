@@ -4,11 +4,13 @@
       <div class="banner-desc">
         <h1>Peony UI</h1>
         <p>基于 Vue 2.0 的PC端组件库</p>
+        <p>目前正在尽力开发中，一个人慢是正常的...</p>
       </div>
     </div>
     <div class="blooming-gorgeous">
       <img :src="peony" alt="">
     </div>
+    <p style="text-align: center;">总要写点什么不是么？我尽力编...</p>
     <section class="explain-item">
       <h3>为什么开发这样一个东西？</h3>
       <p>我是一个前端开发者，在使用诸如elemen、iview等第三方vue库时，总觉得它们还缺少一些东西；在使用时，我们需要定义一些其他的组件；于是，把本人常用的一些第三方组件做以打包发布，以期能节省您的时间，简化您的开发。</p>

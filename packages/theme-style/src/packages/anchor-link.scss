@@ -1,0 +1,25 @@
+.peony-anchor-link {
+  padding: 8px 0 8px 16px;
+  line-height: 1;
+  .peony-anchor-link__title {
+    position: relative;
+    display: block;
+    transition: all .3s;
+    color: #515a6e;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &:only-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.peony-anchor-link.is-active > .peony-anchor-link__title {
+  color: #2d8cf0;
+}
+.peony-anchor-link .peony-anchor-link {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
